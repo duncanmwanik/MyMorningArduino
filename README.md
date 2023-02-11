@@ -1,22 +1,20 @@
-# DESK LAMP FIRMWARE
+# MyMorning Program
 The repo contains all the firmware codes for the project and instructions on how to load them to the hardware
 
 ## Requirements
-1) Set up the IDE, for this application you will need to download the Arduino ide [here](https://www.arduino.cc/en/software) if you don't have it already installed for your distributions
-2) Instal the board support package for ESP32 by goint to ` Tools > Board:xx > Board Manager`. In the search bar type ESP32 and select install ESP32 by Espressid Systems.  
-3) Now select TinyPico from ` Tools > Board:xx > ESP32 Arduino > TinyPico`
+1) Download and setup the Arduino ide [here](https://www.arduino.cc/en/software) if you don't have it already installed for your machine.
+2) Install the board support package for ESP32 by goint to ` Tools > Board:xx > Board Manager`. In the search bar type ESP32 and select install ESP32 by Espressif Systems.
+3) Now select `ESP32 Dev Module` from ` Tools > Board:--- > ESP32 Arduino > ESP32 Dev Module`
 
- Once done proceed to the next instructions.
 ## Download the files 
-4)  Download all the files on the `Code`:arrow_down_small: on this platform, In your downloads you will get the a folder :file_folder:  `desk_lamp_firmware`this will have:
- - desk_lamp_firmware - containing actual code
- - library -this contains all the related libraries used in the project
+4)  Download all the files on the `Code`:arrow_down_small: on this platform, In your downloads you will get the a folder :file_folder:  `MyMorningArduino`this will have:
+ - main - containing actual code
+ - library.zip -this contains the libraries used in the project
 
 ## Library Installation
-5)  On library installation open the folder `library` folder:file_folder downloaded above:,
-copy and paste all the folders to your directory `documents/arduino/library` folder :file_folder:
+5)  Unzip the `library.zip` and copy and paste all the different folders inside to your Arduino library directory usually `user/documents/arduino/library` folder :file_folder:
 
-6)  Open the `desk_lamp_firmware.ino`  on `desk_lamp_firmware`folder :file_folder: with the downloaded ide, compile and upload to the hardware `(procedure on how to use the ide is on the tutorial link)`:link:
+6)  Run Arduino and open the `main` folder. Compile and upload to the hardware. `(procedure on how to use the ide is on the tutorial link)`:link:
 [tutorial](https://www.youtube.com/watch?v=nL34zDTPkcs&t=3s)
 
 # Uploading the codes  :arrow_up:
@@ -32,13 +30,20 @@ or here  :link: [buy usbasp](https://www.amazon.com/CP2102-Module-Converter-Down
 You can also explore more from the following tutorial :link:[How to Use FTDI Programmer to upload Code](https://www.youtube.com/watch?v=JYchUapoqzc)
 
 ## Debugging 
-To see the serial data as sent or received from either of the boards we can use the FTDI programmer or any USB to TTL converter so that you can have access to a serial port. Check out the headers on the board for uart communications 
+Open the `Serial Monitor` to see the serial data as sent or received from either of the boards using the FTDI programmer or any USB to TTL converter so that you can have access to a serial port. Check out the headers on the board for uart communications.
 
-## Operation of desk lamp
-- Press on/off button to turn the lamp on or off
-- Color button is used to select between 3 color modes: warm , neutral and cool white
-- Brightness up is used to increase brightness of the led from 10% to 100%
-- Brightness down button is used to decrease brightness down up to 10%
+## Operation
+- Once the code is uploaded, open MyMorning app and turn on bluetooth.
+- Go to `Devices` tab and pair your device.
+- This will sync time from your phone to the device. You can also set time in `main.ino` in `setupTime()`.
+- Create an alarm as desired. maybe a minute away.
+- When the alarm rings and the motor vibrates, a single button press will snooze the alarm while a long press will stop the alarm.
+- On snoozing, the alarm will vibrate again after the snooze time.
+
+# To implement: 
+- battery monitoring
+- esp32-sleep
+- choose vibration patterns
 
 # END
 
