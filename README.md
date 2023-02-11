@@ -8,8 +8,9 @@ The repo contains all the firmware codes for the project and instructions on how
 
 ## Download the files 
 4)  Download all the files on the `Code`:arrow_down_small: on this platform, In your downloads you will get the a folder :file_folder:  `MyMorningArduino`this will have:
- - main - containing actual code
- - library.zip -this contains the libraries used in the project
+ - `main` - containing actual code
+ - `library.zip` - this contains the libraries used in the project
+ - `MyMorning.apk` - the app
 
 ## Library Installation
 5)  Unzip the `library.zip` and copy and paste all the different folders inside to your Arduino library directory usually `user/documents/arduino/library` folder :file_folder:
