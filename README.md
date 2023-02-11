@@ -1,5 +1,5 @@
-# MyMorning Program
-The repo contains all the firmware codes for the project and instructions on how to load them to the hardware
+# MyMorning
+The repo contains all the firmware codes for the project and instructions on how to load them to the hardware.
 
 ## Requirements
 1) Download and setup the Arduino ide [here](https://www.arduino.cc/en/software) if you don't have it already installed for your machine.
