@@ -1,6 +1,9 @@
 # MyMorning
 The repo contains all the firmware codes for the project and instructions on how to load them to the hardware.
 
+#NOTE
+- Power the PCB separately using the Micro-USB. Do not use the Vcc from the FTDI chip. This ensures the ESP32 is getting enough power to run Bluetooth and the motor.
+ 
 ## Requirements
 1) Download and setup the Arduino ide [here](https://www.arduino.cc/en/software) if you don't have it already installed for your machine.
 2) Install the board support package for ESP32 by goint to ` Tools > Board:xx > Board Manager`. In the search bar type ESP32 and select install ESP32 by Espressif Systems.
@@ -10,7 +13,7 @@ The repo contains all the firmware codes for the project and instructions on how
 4)  Download all the files on the `Code`:arrow_down_small: on this platform, In your downloads you will get the a folder :file_folder:  `MyMorningArduino`this will have:
  - `main` - containing actual code
  - `library.zip` - this contains the libraries used in the project
- - `MyMorning.apk` - the app
+ - `MyMorning.apk` - the app to install
 
 ## Library Installation
 5)  Unzip the `library.zip` and copy and paste all the different folders inside to your Arduino library directory usually `user/documents/arduino/library` folder :file_folder:
