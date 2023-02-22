@@ -3,6 +3,7 @@ The repo contains all the firmware codes for the project and instructions on how
 
 #NOTE
 - Power the PCB separately using the Micro-USB. Do not use the Vcc from the FTDI chip. This ensures the ESP32 is getting enough power to run Bluetooth and the motor.
+- Use the smaller haptic motors. The larger ones don't run due to insufficient power.
  
 ## Requirements
 1) Download and setup the Arduino ide [here](https://www.arduino.cc/en/software) if you don't have it already installed for your machine.
